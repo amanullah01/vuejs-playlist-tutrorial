@@ -11,8 +11,8 @@
   <body>
     <div id="vue-app">
       <h1>Events</h1>
-      <button v-bind:click="add(1)">Add a year</button>
-      <!-- <button @click="sub(1)">Sub a year</button> -->
+      <button v-on:click="add(1)">Add a year</button>
+      <button @click="sub(1)">Sub a year</button>
       <p>Age: {{ age }}</p>
     </div>
     <script src="app.js"></script>
