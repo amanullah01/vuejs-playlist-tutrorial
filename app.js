@@ -1,14 +1,14 @@
 new Vue({
   el: "#vue-app",
   data: {
-    name: "Aman",
-    job: "Software Engineer",
-    website: "https://www.google.com",
-    webTag: "<a href='https://www.google.com' target='_blank'>Google</a>"
+    age: 29,
   },
   methods: {
-    greet(time) {
-      return "Good " + time + " " + this.name;
+    add(inc) {
+      this.age +=inc;
+    },
+    sub(dec){
+        this.age -=dec;
     }
   }
 });
