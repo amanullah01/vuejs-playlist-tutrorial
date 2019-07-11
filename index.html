@@ -16,6 +16,7 @@
       <button v-on:dblclick="add(10)">Add 10y doubl click</button>
       <button @dblclick="sub(10)">Sub 10y doubl click</button>
       <p>Age: {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
     </div>
     <script src="app.js"></script>
   </body>
