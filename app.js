@@ -5,7 +5,7 @@ new Vue({
   },
   methods: {
     add(inc) {
-      this.age += 1;
+      this.age += inc;
     },
     sub(dec){
         this.age -=dec;
