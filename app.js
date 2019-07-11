@@ -3,5 +3,10 @@ new Vue({
   data: {
     name: "Aman",
     job: "Software Engineer"
+  },
+  methods: {
+    greet(time) {
+      return "Good " + time + " " + this.name;
+    }
   }
 });
