@@ -10,21 +10,17 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Dynamic CSS class</h1>
-      <h3>Example 1</h3>
-      <div
-        v-on:click="isAvailable = !isAvailable"
-        v-bind:class="{available: isAvailable}"
-      >
-        <span>Hello</span>
-      </div>
+      <h1>Conditions</h1>
+      <h3>Example 1 if else</h3>
+      <button v-on:click="error = !error">Toggole Error</button>
+      <button v-on:click="success = !success">Toggole Success</button>
+      <p v-if="error">There has an error!</p>
+      <p v-else-if="success">You are successfully done</p>
 
-      <h3>Example 2 using computed</h3>
-      <button v-on:click="isAvailable = !isAvailable">Toggole Available</button>
-      <button v-on:click="isNearby = !isNearby">Toggole Nearby</button>
-      <div v-bind:class="computedCssClass">
-        <span>Computed</span>
-      </div>
+      <h3>Example 2 v-show</h3>
+
+      <p v-show="error">There has an error!</p>
+      <p v-show="success">You are successfully done</p>
     </div>
     <script src="app.js"></script>
   </body>
