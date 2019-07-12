@@ -30,6 +30,11 @@
         <h6>{{ index }}. {{ ninja.name }}</h6>
         <p>Age: {{ ninja.age }}</p>
       </template>
+
+      <h5>Loop inside template tag and show key value</h5>
+      <template v-for="(ninja,index) in ninjas">
+        <p v-for="(val,key) in ninja">{{ key }} ===> {{ val }}</p>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
