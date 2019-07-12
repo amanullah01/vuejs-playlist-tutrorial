@@ -10,17 +10,16 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Conditions</h1>
-      <h3>Example 1 if else</h3>
-      <button v-on:click="error = !error">Toggole Error</button>
-      <button v-on:click="success = !success">Toggole Success</button>
-      <p v-if="error">There has an error!</p>
-      <p v-else-if="success">You are successfully done</p>
+      <h1>Loop v-for</h1>
 
-      <h3>Example 2 v-show</h3>
-
-      <p v-show="error">There has an error!</p>
-      <p v-show="success">You are successfully done</p>
+      <h5>From array</h5>
+      <ul>
+        <li v-for="character in characters">{{ character }}</li>
+      </ul>
+      <h5>From Object array</h5>
+      <ul>
+        <li v-for="ninja in ninjas">{{ ninja.name }} - {{ ninja.age }}</li>
+      </ul>
     </div>
     <script src="app.js"></script>
   </body>
