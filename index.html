@@ -14,12 +14,22 @@
 
       <h5>From array</h5>
       <ul>
-        <li v-for="(character,index) in characters">{{index}}. {{ character }}</li>
+        <li v-for="(character,index) in characters">
+          {{ index }}. {{ character }}
+        </li>
       </ul>
       <h5>From Object array</h5>
       <ul>
-        <li v-for="(ninja,index) in ninjas">{{index}}.{{ ninja.name }} - {{ ninja.age }}</li>
+        <li v-for="(ninja,index) in ninjas">
+          {{ index }}.{{ ninja.name }} - {{ ninja.age }}
+        </li>
       </ul>
+
+      <h5>Loop inside template tag</h5>
+      <template v-for="(ninja,index) in ninjas">
+        <h6>{{ index }}. {{ ninja.name }}</h6>
+        <p>Age: {{ ninja.age }}</p>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
