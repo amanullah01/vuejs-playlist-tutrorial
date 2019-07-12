@@ -10,15 +10,21 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Computed properties</h1>
-      <button @click="a++">Add to A</button>
-      <button @click="b++">Add to B</button>
+      <h1>Dynamic CSS class</h1>
+      <h3>Example 1</h3>
+      <div
+        v-on:click="isAvailable = !isAvailable"
+        v-bind:class="{available: isAvailable}"
+      >
+        <span>Hello</span>
+      </div>
 
-      <p>A # {{ a }}</p>
-      <p>B # {{ b }}</p>
-
-      <p>Age({{ age }}) + A = {{ addToA }}</p>
-      <p>Age({{ age }}) + B = {{ addToB }}</p>
+      <h3>Example 2 using computed</h3>
+      <button v-on:click="isAvailable = !isAvailable">Toggole Available</button>
+      <button v-on:click="isNearby = !isNearby">Toggole Nearby</button>
+      <div v-bind:class="computedCssClass">
+        <span>Computed</span>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
