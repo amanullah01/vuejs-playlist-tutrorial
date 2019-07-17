@@ -10,31 +10,19 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Loop v-for</h1>
+      <!-- bag image -->
+      <div id="bag" v-bind:class="{burst: ended}"></div>
 
-      <h5>From array</h5>
-      <ul>
-        <li v-for="(character,index) in characters">
-          {{ index }}. {{ character }}
-        </li>
-      </ul>
-      <h5>From Object array</h5>
-      <ul>
-        <li v-for="(ninja,index) in ninjas">
-          {{ index }}.{{ ninja.name }} - {{ ninja.age }}
-        </li>
-      </ul>
+      <!-- bag health -->
+      <div id="bag-health">
+        <div v-bind:style="{width: health + '%'}"></div>
+      </div>
 
-      <h5>Loop inside template tag</h5>
-      <template v-for="(ninja,index) in ninjas">
-        <h6>{{ index }}. {{ ninja.name }}</h6>
-        <p>Age: {{ ninja.age }}</p>
-      </template>
-
-      <h5>Loop inside template tag and show key value</h5>
-      <template v-for="(ninja,index) in ninjas">
-        <p v-for="(val,key) in ninja">{{ key }} ===> {{ val }}</p>
-      </template>
+      <!-- bag control -->
+      <div id="controls">
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart">Restart</button>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
