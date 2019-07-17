@@ -6,7 +6,20 @@ var one = new Vue({
   methods: {},
   computed: {
     greet: function() {
-      return "Hello, Good ";
+      return "Hello, Good Morning app one instance";
+    }
+  }
+});
+
+var two = new Vue({
+  el: "#vue-app-two",
+  data: {
+    title: "Vue app two title"
+  },
+  methods: {},
+  computed: {
+    greet: function() {
+      return "Hello, Evening app two instance ";
     }
   }
 });
