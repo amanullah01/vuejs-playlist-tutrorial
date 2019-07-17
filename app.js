@@ -14,12 +14,21 @@ var one = new Vue({
 var two = new Vue({
   el: "#vue-app-two",
   data: {
-    title: "Vue app two title"
+    title: "Vue app two title",
+    outside: false,
+    outText: ""
   },
-  methods: {},
+  methods: {
+    changeOneTitle: function() {
+      one.title = "Changed from vue app two. This is title one";
+    }
+  },
   computed: {
     greet: function() {
       return "Hello, Evening app two instance ";
     }
   }
 });
+
+two.outside = true;
+two.outText = "This text comes from outside on instance";
