@@ -1,20 +1,12 @@
-new Vue({
-  el: "#vue-app",
+var one = new Vue({
+  el: "#vue-app-one",
   data: {
-    health: 100,
-    ended: false
+    title: "Vue app one title"
   },
-  methods: {
-    punch: function() {
-      this.health -= 10;
-      if (this.health <= 0) {
-        this.ended = true;
-      }
-    },
-    restart: function() {
-      this.health = 100;
-      this.ended = false;
+  methods: {},
+  computed: {
+    greet: function() {
+      return "Hello, Good ";
     }
-  },
-  computed: {}
+  }
 });
