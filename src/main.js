@@ -5,6 +5,9 @@ import App from "./App.vue";
 // import Ninjas from "./components/Ninjas.vue";
 // Vue.component("ninjas", Ninjas);
 
+//event bus
+export const bus = new Vue();
+
 Vue.config.productionTip = false;
 
 new Vue({
