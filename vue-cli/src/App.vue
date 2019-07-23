@@ -1,43 +1,27 @@
 <template>
-  <!-- <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>-->
   <div>
-    <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
-    <ninjas></ninjas>
+    <app-header></app-header>
+    <app-ninjas></app-ninjas>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import Ninjas from "./components/Ninjas.vue";
 
 export default {
   components: {
-    ninjas: Ninjas
+    "app-header": Header,
+    "app-footer": Footer,
+    "app-ninjas": Ninjas
   },
   data: function() {
-    return {
-      title: "Ninja App"
-    };
-  },
-  methods: {
-    greeting() {
-      return "Good moring!";
-    }
+    return {};
   }
 };
 </script>
 
-<style scoped>
-h1 {
-  color: purple;
-}
-</style>
 <style>
-p {
-  color: green;
-}
 </style>
