@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     changePrimitiveType() {
-      this.title = "Hello Primitive type data";
+      this.$emit("changeTitle", "Vue Wizerd");
     }
   }
 };
