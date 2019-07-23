@@ -15,7 +15,9 @@
 import Ninjas from "./components/Ninjas.vue";
 
 export default {
-  components: { Ninjas },
+  components: {
+    ninjas: Ninjas
+  },
   data: function() {
     return {
       title: "Ninja App"
