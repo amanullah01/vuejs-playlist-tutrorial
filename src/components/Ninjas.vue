@@ -28,22 +28,22 @@ export default {
   },
   //lifecycle hooks
   beforeCreate() {
-    alert("beforeCreate");
+    console.log("beforeCreate");
   },
   created() {
-    alert("created");
+    console.log("created");
   },
   beforeMount() {
-    alert("beforeMount");
+    console.log("beforeMount");
   },
   mounted() {
-    alert("mounted");
+    console.log("mounted");
   },
   beforeUpdate() {
-    alert("beforeUpdated");
+    console.log("beforeUpdated");
   },
   updated() {
-    alert("updated");
+    console.log("updated");
   }
 };
 </script>
