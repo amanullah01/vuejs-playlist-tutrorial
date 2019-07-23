@@ -1,14 +1,20 @@
 <template>
   <footer>
-    <p>{{ copyright }}</p>
+    <p>{{ copyright }} {{title}}</p>
   </footer>
 </template>
 <script>
 export default {
   name: "app-footer",
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
-      copyright: "Copyright 2019 Aman"
+      copyright: "Copyright 2019 "
     };
   }
 };

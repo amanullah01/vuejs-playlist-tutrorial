@@ -1,10 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
     <hr />
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -28,7 +28,8 @@ export default {
         { id: 4, name: "Tago", speciality: "TypeScript", show: false },
         { id: 5, name: "Kami", speciality: "Webpack", show: true },
         { id: 6, name: "Yosi", speciality: "Aakaimma", show: false }
-      ]
+      ],
+      title: "Aman"
     };
   }
 };
