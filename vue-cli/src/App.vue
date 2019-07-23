@@ -12,8 +12,10 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import Ninjas from "./components/Ninjas.vue";
 
 export default {
+  components: { Ninjas },
   data: function() {
     return {
       title: "Ninja App"
