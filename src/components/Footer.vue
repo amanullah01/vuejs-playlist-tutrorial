@@ -1,9 +1,11 @@
 <template>
   <footer>
-    <p>{{ copyright }} {{title}}</p>
+    <p>{{ copyright }} {{titleCopy}}</p>
   </footer>
 </template>
 <script>
+import { bus } from "../main";
+
 export default {
   name: "app-footer",
   props: {
@@ -14,8 +16,14 @@ export default {
   },
   data() {
     return {
-      copyright: "Copyright 2019 "
+      copyright: "Copyright 2019 ",
+      titleCopy: this.title
     };
+  },
+  created() {
+    bus.$on("changeTitleEventBus", data => {
+      this.titleCopy = data;
+    });
   }
 };
 </script>

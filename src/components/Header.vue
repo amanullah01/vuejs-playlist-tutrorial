@@ -1,10 +1,11 @@
 <template>
   <header>
-    <h1 @click="changePrimitiveType">{{ title }}</h1>
+    <h1 @click="changePrimitiveType">{{ titleCopy }}</h1>
   </header>
 </template>
 
 <script>
+import { bus } from "../main";
 export default {
   //   name: "appHeader",
   props: {
@@ -14,12 +15,16 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      titleCopy: this.title
+    };
   },
   methods: {
     changePrimitiveType() {
       //emit
-      this.$emit("changeTitle", "Vue Wizerd");
+      //this.$emit("changeTitle", "Vue Wizerd");
+      this.titleCopy = "Vue Wizerd event bus";
+      bus.$emit("changeTitleEventBus", "Vue Wizerd event bus");
     }
   }
 };
