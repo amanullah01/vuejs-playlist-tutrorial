@@ -3,14 +3,14 @@
     <h2>Add a new blog</h2>
     <form>
       <label for>Blog Title:</label>
-      <input type="text" v-model="title" required />
+      <input type="text" v-model="blog.title" required />
       <label for>Blog Content:</label>
-      <textarea v-model="content" cols="20" rows="5"></textarea>
+      <textarea v-model="blog.content" cols="20" rows="5"></textarea>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
-      <p>Blog title: {{ title }}</p>
-      <p>Blog content: {{ content }}</p>
+      <p>Blog title: {{ blog.title }}</p>
+      <p>Blog content: {{ blog.content }}</p>
     </div>
   </div>
 </template>
@@ -20,8 +20,10 @@ export default {
   components: {},
   data: function() {
     return {
-      title: "",
-      content: ""
+      blog: {
+        title: "",
+        content: ""
+      }
     };
   },
   methods: {}
