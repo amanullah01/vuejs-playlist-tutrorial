@@ -17,5 +17,13 @@
 </template>
 
 <script>
-export default {};
+import formHelper from "./formHelper.vue";
+export default {
+  components: {
+    "form-helper": formHelper
+  },
+  methods: {
+    handleSubmit: function() {}
+  }
+};
 </script>
