@@ -1,8 +1,17 @@
 <template>
   <div>
     <form-helper>
-      <h2 slot="title">{{ title }}</h2>
-      <p slot="text">I am the slot paragraph</p>
+      <div slot="form-header">
+        <h3>This is the title of form</h3>
+        <p>Information about the slot</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="Name" required />
+        <input type="password" placeholder="Password" required />
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handleSubmit">Submit</button>
+      </div>
     </form-helper>
   </div>
 </template>
@@ -19,9 +28,15 @@ export default {
       title: "I am a dynamic slot title"
     };
   },
-  methods: {}
+  methods: {
+    handleSubmit: function() {}
+  }
 };
 </script>
 
 <style>
+body {
+  margin: 0;
+  font-family: "Nunito SemiBold";
+}
 </style>
