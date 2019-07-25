@@ -2,7 +2,9 @@
   <div>
     <button v-on:click="component = 'form-one'">Show form one</button>
     <button v-on:click="component = 'form-two'">Show form two</button>
-    <component v-bind:is="component"></component>
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
   </div>
 </template>
 
