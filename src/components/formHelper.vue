@@ -1,8 +1,8 @@
 <template>
   <div>
-    <slot></slot>
+    <slot name="title"></slot>
     <h1>I am the from helper</h1>
-    <slot></slot>
+    <slot name="text"></slot>
   </div>
 </template>
 
